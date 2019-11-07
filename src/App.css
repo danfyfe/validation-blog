@@ -20,3 +20,16 @@
 .App-link {
   color: #09d3ac;
 }
+
+#email-input {
+
+}
+
+#email-submit-btn {
+  
+}
+
+#email-validation-span {
+  font-size: 0.60em;
+  color: red;
+}
