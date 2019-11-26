@@ -1,0 +1,71 @@
+body {
+  font: 100% Helvetica, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+#email-validation-span {
+  font-size: 0.6em;
+  color: red;
+}
+
+.email-input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.corn {
+  color: cornsilk;
+}
+
+.main {
+  color: #2db8c2;
+  background-color: #edd793;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 2vh 2vw;
+  background-color: #2db8c2;
+}
+nav button {
+  background-color: #edd793;
+}
+
+.box {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/*# sourceMappingURL=input.css.map */

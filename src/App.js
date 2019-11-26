@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './css/input.css';
 import EmailForm from './EmailForm'
 
 function App() {

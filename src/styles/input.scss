@@ -1,0 +1,92 @@
+@import 'colors';
+@import 'fonts';
+@import 'App';
+
+.form {
+    padding: 10px;
+    margin: 2vh auto;
+}
+
+.corn {
+    color: cornsilk
+}
+
+.main {
+    color: $primary-color;
+    background-color: $secondary-color;
+}
+
+nav {
+    a {
+        text-decoration: none;
+        margin: 2vh 2vw;
+        background-color: $primary-color;
+    }
+
+    button {
+        background-color: $secondary-color;
+    }
+
+}
+
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+.box {
+    @include box-shadow(10px 10px 5px 0px rgba(0, 0, 0, 0.75));
+    // @include transform(rotate(90deg));
+}
+
+%message-shared {
+    border: 1px solid lightgrey;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto
+}
+
+.message {
+    @extend %message-shared;
+}
+
+.success {
+    @extend %message-shared;
+    background-color: green;
+}
+
+.error {
+    @extend %message-shared;
+    background-color: red;
+}
+
+.warning {
+    @extend %message-shared;
+    background-color: yellow;
+}
+
+
+.left-right-container {
+    width: 100%;
+}
+
+.left {
+    float: left;
+    width: 600px / 960px * 100%;
+}
+
+.right {
+    float: right;
+    width: 300px / 960px * 100%;
+}
+

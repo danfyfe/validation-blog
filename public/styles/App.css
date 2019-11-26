@@ -21,15 +21,20 @@
   color: #09d3ac;
 }
 
-#email-input {
-
-}
-
-#email-submit-btn {
-  
-}
-
 #email-validation-span {
-  font-size: 0.60em;
+  font-size: 0.6em;
   color: red;
 }
+
+.email-input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=App.css.map */
