@@ -25,8 +25,11 @@
 
 }
 
-#email-submit-btn {
-  
+
+
+#submit-btn {
+  margin: 2vh auto;
+  width: 25%;
 }
 
 #email-validation-span {
@@ -34,13 +37,29 @@
   color: red;
 }
 
-.email-input {
+#passConfirm-validation-span {
+  font-size: 0.60em;
+  color: red;
+}
+
+input {
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid black;
+  margin-top: 2vh;
 }
 
-.email-input:focus {
+
+input:focus {
   outline: none;
 }
+
+.form {
+  padding: 10px;
+  margin: 2vh auto;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
