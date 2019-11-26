@@ -5,7 +5,6 @@ const EmailForm = props => {
   const [ email, setEmail ] = useState('')
   const [ pass, setPass ] = useState('')
   const [ passConfirm, setPassConfirm ] = useState('')
-  const [ passMatch, setPassMatch ] = useState(null)
   const [ warning, setWarning ] = useState(false)
 
   useEffect( () => {
@@ -37,7 +36,7 @@ const EmailForm = props => {
       passConfirmInput.style.borderColor = ''
       passConfirmValidationSpan.innerText = ''
     } else if ( pass === '' && passConfirm === '' ) {
-      (console.log('match!'))
+
     } else {
       console.log('wrong!')
       passConfirmInput.style.borderColor = 'red'
@@ -49,12 +48,23 @@ const EmailForm = props => {
 
   const handleFocus = e => {
     e.target.placeholder = ''
-    console.log(e.target)
   }
 
   const handleBlur = e => {
-    e.target.placeholder = 'Please enter email'
-    console.log(e.target)
+
+    switch (e.target.id) {
+      case 'email-input':
+        e.target.placeholder = 'Please enter email';
+        break;
+      case 'pass-input':
+        e.target.placeholder = 'Please enter password'
+        break;
+      case 'passConfirm-input':
+        e.target.placeholder = 'Please confirm password'
+      break;
+
+      default:
+    }
   }
 
   return(
@@ -74,6 +84,8 @@ const EmailForm = props => {
         type='password'
         placeholder='Please enter password'
         onChange={ e => setPass(e.target.value)}
+        onFocus={ e => handleFocus(e)}
+        onBlur={ e => handleBlur(e)}
         />
 
         <input id='passConfirm-input' 
@@ -81,6 +93,8 @@ const EmailForm = props => {
         type='password'
         placeholder='Please confirm password'
         onChange={ e => setPassConfirm(e.target.value)}
+        onFocus={ e => handleFocus(e)}
+        onBlur={ e => handleBlur(e)}
         />
         <span id='passConfirm-validation-span'></span>
 
